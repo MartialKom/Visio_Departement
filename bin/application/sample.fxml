@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <Label alignment="CENTER" prefHeight="43.0" prefWidth="1350.0" style="-fx-background-color: #07daf2;" text="VISUALISER LES FICHES DE PRESENCES" textFill="#803ac6" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <TitledPane fx:id="TitleFiche" animated="false" disable="true" prefHeight="692.0" prefWidth="406.0" text="Choisir la fiche à consulter" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="666.0" prefWidth="441.0">
+               <children>
+                  <Label layoutX="69.0" layoutY="100.0" prefHeight="61.0" prefWidth="264.0" text="Données de la fiche" textFill="#3e8685">
+                     <font>
+                        <Font name="Papyrus" size="30.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="101.0" layoutY="160.0" prefWidth="200.0" />
+                  <Label layoutX="134.0" layoutY="23.0" text="VISIO">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6784313917160034" green="0.06666667014360428" blue="0.5921568870544434" opacity="0.7300000190734863" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="192.0" layoutY="34.0" text="Genie Informatique">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6784313917160034" green="0.06666667014360428" blue="0.5921568870544434" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="224.0" text="Choissisez la filiere :" textFill="#347b83">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combFiliere" layoutX="226.0" layoutY="227.0" onAction="#Selectionner" prefWidth="150.0" promptText="Choisir" />
+                  <Label layoutX="21.0" layoutY="319.0" text="Choissisez une date :" textFill="#347b83">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combDate" layoutX="226.0" layoutY="322.0" onAction="#SelectionnerDate" prefWidth="150.0" promptText="Choisir" />
+                  <Label layoutX="22.0" layoutY="403.0" text="Choissisez une periode :" textFill="#347b83">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combPeriode" layoutX="248.0" layoutY="406.0" onAction="#SelectionnerPeriode" prefWidth="150.0" promptText="Choisir" />
+                  <Label layoutX="19.0" layoutY="495.0" text="Si des données ne s'affichent pas, alors la fiche n'est pas disponible!!!&#10;" textFill="#dd0f0f" />
+                  <Button fx:id="validButton" layoutX="160.0" layoutY="557.0" mnemonicParsing="false" onAction="#valider" prefHeight="35.0" prefWidth="82.0" style="-fx-background-color: grey;" text="Valider" textFill="#13238d">
+                     <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="absentButton" disable="true" layoutX="282.0" layoutY="557.0" mnemonicParsing="false" onAction="#absent" prefHeight="36.0" prefWidth="105.0" text="Les absents" textFill="#9a2323" visible="false">
+                     <font>
+                        <Font name="Segoe Print Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </left>
+   <bottom>
+      <Pane prefHeight="56.0" prefWidth="1350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startButton" alignment="CENTER" layoutX="705.0" layoutY="4.0" mnemonicParsing="false" onAction="#start" text="START" textAlignment="CENTER" textFill="#2540c6">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="stopButton" disable="true" layoutX="705.0" layoutY="4.0" mnemonicParsing="false" onAction="#stop" prefHeight="44.0" prefWidth="87.0" text="STOP" textFill="#ee1111" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+   <right>
+      <ListView fx:id="logList" prefHeight="621.0" prefWidth="226.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <AnchorPane fx:id="Ancre" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tablePresence" layoutX="3.0" layoutY="-1.0" prefHeight="562.0" prefWidth="715.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+              <columns>
+                <TableColumn fx:id="columnMatricule" prefWidth="153.0" text="Matricule" />
+                <TableColumn fx:id="columnNom" minWidth="0.0" prefWidth="153.0" text="Nom" />
+                  <TableColumn fx:id="columnPrenom" prefWidth="136.0" text="Prenom" />
+                  <TableColumn fx:id="columnFiliere" prefWidth="136.0" text="Filiere" />
+                  <TableColumn fx:id="columnNomCours" prefWidth="136.0" text="Nom du cours" />
+              </columns>
+            </TableView>
+            <Label fx:id="warning" layoutX="204.0" layoutY="579.0" style="-fx-background-color: #e53b24; -fx-background-radius: 14px;" text="Tous les champs doivent etre remplis" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <BorderPane fx:id="borderAbs" layoutX="21.0" layoutY="51.0" prefHeight="449.0" prefWidth="678.0" visible="false">
+               <top>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="693.0" style="-fx-background-color: #5b1a1a;" text="Etudiants absents" textFill="#beb1c3" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </top>
+               <center>
+                  <TableView fx:id="tableAbscence" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="columnMatriculeAbs" prefWidth="194.0" text="Matricule" />
+                      <TableColumn fx:id="columnNomAbs" prefWidth="175.0" text="Nom" />
+                        <TableColumn fx:id="columnPrenomAbs" prefWidth="153.0" text="Prenom" />
+                        <TableColumn fx:id="columnFiliereAbs" prefWidth="155.0" text="Filiere" />
+                    </columns>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
