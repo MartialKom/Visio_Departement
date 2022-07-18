@@ -3,7 +3,7 @@
 VISIO_Departement is an extension of VISIO that offer the possibilitie to a members of one departement to see all list of presence for any classes of their departement
 
 <p align="center">
- <img src="./VISIODep.png" alt="Logo" style="width: 300px;"/></div>
+ <img src="./VISIODep.png" alt="Main Interface" style="width: 300px;"/></div>
 </p>
 
 
@@ -14,7 +14,7 @@ VISIO_Departement is an extension of VISIO that offer the possibilitie to a memb
 
 
 # Installation Guide
-For more informations contact Tamaroas-Dev from facebook
+For more informations contact Tamaroas-Dev from facebook or send a mail to <b>martialkom123@gmail.com</b>
 
 ### Required Software
 To properly run this Application on your System, At first you need to download and install the following software:
@@ -84,33 +84,7 @@ class Database {
 	.
 	.
 ```
-# LICENCE
 
-```licence
-
-IUT License
-
-Copyright (c) 2022 Kom Kanmegne Martial
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-```
 
        
 
